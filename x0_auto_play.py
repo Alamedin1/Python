@@ -131,17 +131,21 @@ def choose_place(player,board):
         print ('Enter error, you should to write number from 1 to 9 suka!')
 
 def choose_player():
-    print('Choose who to play for Х or 0: ')
-    human = input('Enter: ')
+    human = ''
     kampukter = ''
-    if human.upper() == 'X':
-        human = 'X'
-        kampukter = '0'
-    elif human.upper() == '0':
-        human = '0'
-        kampukter = 'X'
-    else:
-        print('Mistake. There is no such player ')
+    while True:
+        print('Choose who to play for Х or 0: ')
+        human = input('Enter: ')
+        if human.upper() == 'X':
+            human = 'X'
+            kampukter = '0'
+            break
+        elif human.upper() == '0':
+            human = '0'
+            kampukter = 'X'
+            break
+        else:
+            print('Mistake. There is no such player ')
     return human, kampukter
 
 def test_func():
