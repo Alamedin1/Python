@@ -61,6 +61,8 @@ class Move:
 # функция минмакс
 def minmax(newboard, human, kampukter, curent_player):
     availspots = emptyIndices(newboard) # доступные клетки
+    if len(availspots) == len(newboard):
+        return Move(1,0)
     if check_win(human, newboard): # проверка на поражение компьютера
         return Move(-1,-1)
     if check_win(kampukter, newboard): # проверка на выйгрыш компьютера
