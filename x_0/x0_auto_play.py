@@ -97,7 +97,7 @@ def minmax(newboard, human, kampukter, curent_player):
         bestmove.score = 10
         for m in moves: # пройти по ходам и выбрать ход с наименьшим кол-вом очков
             if  m.score < bestmove.score:
-                bestmove =  m
+                bestmove = m
     print("show current player moves:")
     for m in moves:
         print("index ",m.index," score ",m.score)
@@ -128,7 +128,7 @@ def choose_place(player,board):
         except Exception as e: # вылавливает все исключения и их выводит
             print(e)
         plot_board(board)
-        print ('Enter error, you should to write number from 1 to 9 suka!')
+        print ('Enter error, you should to write number from 1 to 9!')
 
 def choose_player():
     human = ''
@@ -178,7 +178,7 @@ if __name__ == '__main__':
                 if current_kampukter_move.score == -1:
                     print("Player win!")
                 else:
-                    print("Fucking nichya!")
+                    print("!")
         else:
             plot_board(test_board)
             if kampukter == current_player:
@@ -186,7 +186,7 @@ if __name__ == '__main__':
                 test_board[current_kampukter_move.index] = kampukter
                 current_player = human
             else:
-                print("make your move suka!")
+                print("make your move!")
                 choose_place(human,test_board)
                 current_player = kampukter
         plot_board(test_board)
